@@ -1,6 +1,9 @@
+// Sadie Gress, June 2024
+// Camera Code for TwoFeetTall
+
 using UnityEngine;
 
-public class camera : MonoBehaviour
+public class Camera : MonoBehaviour
 {
     void Awake() {
         Cursor.lockState = CursorLockMode.Locked;

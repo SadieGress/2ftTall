@@ -1,3 +1,6 @@
+// Sadie Gress, June 2024
+// Movement Code for TwoFeetTall
+
 using UnityEngine;
 
 public class Movement : MonoBehaviour
