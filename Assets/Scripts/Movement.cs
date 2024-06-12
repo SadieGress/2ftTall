@@ -6,6 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     float yVel = 0f, grav = -9.81f, velocitySpeed;
+    public Vector3 publicVelocity;
     Vector2 playerInput, velocity, desiredVelocity;
     [SerializeField] CharacterController controller;
     [SerializeField] float walkingTopSpeed = 10f, sprintingTopSpeed = 15f, accelerationSpeed = 10f, jumpVelocity = 10f;
@@ -27,7 +28,8 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && controller.isGrounded) {
             yVel = jumpVelocity;
         }
-        controller.Move((transform.forward * velocity.y + transform.up * yVel + transform.right * velocity.x) * Time.deltaTime); //move by velocity
+        publicVelocity = transform.forward * velocity.y + transform.up * yVel + transform.right * velocity.x;
+        controller.Move(publicVelocity * Time.deltaTime); //move by velocity
     }
 }
 
