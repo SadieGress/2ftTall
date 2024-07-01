@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26df878cfe8ff1543bf4460032dcfa4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  publicVelocity: {x: 0, y: 0, z: 0}
   controller: {fileID: 1910588553115415918}
   walkingTopSpeed: 4
   sprintingTopSpeed: 10
